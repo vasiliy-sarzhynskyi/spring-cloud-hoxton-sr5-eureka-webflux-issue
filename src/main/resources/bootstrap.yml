@@ -1,0 +1,18 @@
+spring:
+  codec:
+    max-in-memory-size: 100MB
+  cloud:
+    config:
+      failFast: true
+      discovery:
+        enabled: true
+        serviceId: CONFIGURATION-SERVICE
+
+eureka:
+  client:
+    enabled: true
+    fetchRegistry: true
+    registerWithEureka: true
+    registryFetchIntervalSeconds: 10
+    serviceUrl:
+      defaultZone: http://eureka.xxx.com:8080/eureka

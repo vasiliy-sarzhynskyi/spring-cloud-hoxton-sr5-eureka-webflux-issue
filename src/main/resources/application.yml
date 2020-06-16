@@ -1,0 +1,22 @@
+spring:
+  codec:
+    max-in-memory-size: 100MB
+  main.allow-bean-definition-overriding: true
+  application.name: issue-with-hoxton-sr5-and-webflux-service
+
+management:
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      base-path: ''
+      exposure:
+        include: '*'
+
+eureka.client.healthcheck.enabled: true
+
